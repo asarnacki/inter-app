@@ -13,9 +13,12 @@ import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { ProductsComponent } from './products/products.component';
+import { HttpClientModule } from '@angular/common/http';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ProductsComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -30,6 +33,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatDividerModule,
     MatBadgeModule,
     MatExpansionModule,
+    HttpClientModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -8,10 +8,6 @@
     <mat-expansion-panel-header>
       <mat-panel-description> Wybor produktow </mat-panel-description>
     </mat-expansion-panel-header>
-    <mat-card *ngFor="let item of dataArray | keyvalue; index as i " (click)=elo(dataArray[item.key])>{{dataArray[item.key].name}} 
-      <mat-card-actions> 
-        <mat-icon svgIcon="question" aria-hidden="false" aria-label="This is the SVG icon"></mat-icon>
-        </mat-card-actions>
-    </mat-card>
+    <app-products></app-products>
   </mat-expansion-panel>
 </mat-accordion>

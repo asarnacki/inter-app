@@ -1,0 +1,13 @@
+<div class="cards" *ngFor="let item of dataArray | keyvalue; index as i"
+(click)="elo(dataArray[item.key])">
+  <mat-card (click)="select(item.key)" [class.mat-card-change]="isSelected(item.key)">
+    >{{ dataArray[item.key].name }}
+    <mat-card-actions>
+      <mat-icon
+        svgIcon="question"
+        aria-hidden="false"
+        matTooltip= {{dataArray[item.key].deccription}}
+      ></mat-icon>
+    </mat-card-actions>
+  </mat-card>
+</div>
