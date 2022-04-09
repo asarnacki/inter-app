@@ -1,49 +1,3 @@
-import { Component, forwardRef } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
-import  JSON  from '../assets/data.json';
-@Component({
-  selector: 'app-root',
-  template: ` <mat-card *ngFor="let item of dataArray | keyvalue; index as i " (click)=elo(dataArray[item.key])>{{dataArray[item.key].name}} 
-  <mat-card-actions> 
-    <mat-icon svgIcon="question" aria-hidden="false" aria-label="This is the SVG icon"></mat-icon>
-    </mat-card-actions>
-</mat-card>`,
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => AppComponent),
-    },
-  ],
-})
-
-
-export class AppComponent implements ControlValueAccessor {
-  title = 'inter-app';
-  panelOpenState = false;
-  public objectKeys = Object.keys
-  public objectEntries = Object.entries
-  // public JSON = Object.keys;
-  // public gaz: {[key: number];[value:string]: string} = JSON.data;
-  public dataArray = Object.entries(JSON)[0][1]
-  public dataForConsole = Object.entries(JSON)
-  // map = new Map(JSON);
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
-    iconRegistry.addSvgIconLiteral(
-      'question',
-      sanitizer.bypassSecurityTrustHtml(this.QUESTION_ICON)
-    );
-    console.log(this.dataArray)
-    console.log(this.dataForConsole)
-
-    // console.log(this.dataArray)
-  }
-  
-  
-  public QUESTION_ICON = `
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="50px" height="50px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
 <g>
@@ -95,23 +49,4 @@ export class AppComponent implements ControlValueAccessor {
 </g>
 <g>
 </g>
-</svg>`;
-
-
-  elo(x: object) {
-    this.onTouched;
-    console.log(x)
-
-  };
-
-  onChange!: () => void;
-  onTouched!: () => void
-
-  registerOnChange(fn: any): void {
-    this.onChange = fn;
-  }
-  registerOnTouched(fn: any): void {
-    this.onTouched = fn;
-  }
-  writeValue(obj: any): void {}
-}
+</svg>
