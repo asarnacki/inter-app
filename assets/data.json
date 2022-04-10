@@ -1,0 +1,43 @@
+{
+    "data":[
+    {
+        "id": 1,
+        "name": "Produkt 1",
+        "deccription": "Produkt 1 najlepszy"
+    },
+    {
+        "id": 2,
+        "name": "Produkt 2",
+        "deccription": "Produkt 2 najlepszy"
+    },
+    {
+        "id": 3,
+        "name": "Produkt 3",
+        "deccription": "Produkt 3 najlepszy"
+    },
+    {
+        "id": 4,
+        "name": "Produkt 4",
+        "deccription": "Produkt 4 najlepszy"
+    },
+    {
+        "id": 5,
+        "name": "Produkt 5",
+        "deccription": "Produkt 5 najlepszy"
+    },
+    {
+        "id": 6,
+        "name": "Produkt 6",
+        "deccription": "Produkt 6 najlepszy"
+    },
+    {
+        "id": 7,
+        "name": "Produkt 7",
+        "deccription": "Produkt 7 najlepszy"
+    },
+    {
+        "id": 8,
+        "name": "Produkt 8",
+        "deccription": "Produkt 8 najlepszy"
+    }]
+}
