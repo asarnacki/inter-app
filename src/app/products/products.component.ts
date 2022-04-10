@@ -19,29 +19,21 @@ import { Product } from '../product';
 })
 export class ProductsComponent implements OnInit, ControlValueAccessor {
   public panelOpenState: boolean = false;
-  public flag: boolean = false;
   public selectedName: string = '';
   public dataArray: Product[] = Object.entries(JSON)[0][1];
-  public dataForConsole = Object.entries(JSON);
-  public changeColor: boolean = false;
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
       'question',
       sanitizer.bypassSecurityTrustResourceUrl('../assets/icon.svg')
     );
-
-    console.log(this.dataArray);
-    console.log(this.dataForConsole);
   }
 
-  setColor(value: any) {
-    this.isSelected = value;
-  }
-  elo(x: Product) {
+  showProductDetailsInConsole(product: Product) {
     this.onTouched;
-    console.log(x);
+    console.log(product);
   }
   select(name: string) {
+    this.onTouched;
     this.selectedName = name;
   }
   isSelected(name: string) {

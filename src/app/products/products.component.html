@@ -1,7 +1,7 @@
 <div class="cards" *ngFor="let item of dataArray | keyvalue; index as i"
-(click)="elo(dataArray[item.key])">
+(click)="showProductDetailsInConsole(dataArray[item.key])">
   <mat-card (click)="select(item.key)" [class.mat-card-change]="isSelected(item.key)">
-    >{{ dataArray[item.key].name }}
+    {{ dataArray[item.key].name }}
     <mat-card-actions>
       <mat-icon
         svgIcon="question"
