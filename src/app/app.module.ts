@@ -15,7 +15,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { ProductsComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [AppComponent, ProductsComponent],
@@ -34,7 +34,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatBadgeModule,
     MatExpansionModule,
     HttpClientModule,
-    MatTooltipModule
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
